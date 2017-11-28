@@ -1,0 +1,44 @@
+p {
+	margin-top: .5em
+	margin-bottom: .5em;
+	color: #fff;
+}
+
+
+.jumbo-color {
+	background: orange;
+	;
+}
+
+
+.custom1 {
+	text-align: center;
+	width: 200px;
+	height: 200px;
+	background: #337ab7;
+	margin-left: 1%;
+	margin-right:  7%;
+	}
+
+.custom2{
+	width: 200px;
+	height: 200px;
+	background: #451b55;
+}
+
+h3, h4 {
+	color: #fff;
+}
+
+.user-score {
+	width: 260px;
+	height: 260px;
+	background-color: teal;
+}
+
+
+#guessNumber {
+	margin-top: 50%;
+	color: #fff;
+	font-size: 2em;
+}
