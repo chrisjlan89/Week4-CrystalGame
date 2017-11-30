@@ -28,8 +28,8 @@ p {
 
 .custom3{
 	background: #89ff24;
-    margin: 0 auto;
-    text-align: center;
+    
+    
 }
 
 .custom4{
@@ -43,6 +43,8 @@ p {
 
 h3, h4 {
 	color: #fff;
+	text-align: center;
+	margin-top: 20%;
 }
 
 h2 {
@@ -61,4 +63,8 @@ h2 {
 	margin-top: 50%;
 	color: #fff;
 	font-size: 2em;
+}
+
+body {
+	margin: 0 auto;
 }

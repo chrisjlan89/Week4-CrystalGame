@@ -1,39 +1,35 @@
+
+$( document ).ready(function() {
+
+
 var randNum = Math.floor(Math.random()*100 + 20)
 var userTotal = 0;
 var wins = 0;
 var losses = 0;	 
 
+reset();
 
-
-	 $('#guessNumber').text(randNum);
-     $("#user-total").text(userTotal)
-	console.log(randNum)
-
-var red = Math.floor(Math.random()*12+1);
-var blue = Math.floor(Math.random()*12 + 1);
-var yellow = Math.floor(Math.random()*12 + 1);
-var green = Math.floor(Math.random()*12 + 1);
-console.log("red : " + red);
+function reset(){
+ 
+   randNum = Math.floor(Math.random()*100 + 20)
+   userTotal = 0;
+   red = Math.floor(Math.random()*12+1);
+   blue = Math.floor(Math.random()*12 + 1);
+   yellow = Math.floor(Math.random()*12 + 1);
+   green = Math.floor(Math.random()*12 + 1);
+   console.log("red : " + red);
 console.log("blue : " + blue);
 console.log("yellow : " + yellow);
 console.log("green : " + green);
-
-
-function reset(){
-  var randNum = Math.floor(Math.random()*100 + 20)
-  var userTotal = 0;
-  var red = Math.floor(Math.random()*12+1);
-  var blue = Math.floor(Math.random()*12 + 1);
-  var yellow = Math.floor(Math.random()*12 + 1);
-  var green = Math.floor(Math.random()*12 + 1);
+ console.log("wins : " + wins);
+  console.log("losses:" + losses);
   $("#guessNumber").text(randNum)
   $("user-total").text(userTotal)
   
 };
 
-
-
 $("#red").on('click', function(){
+	var gemSound = 
 	userTotal = userTotal + red;
 	console.log(userTotal)
 	$("#user-total").text(userTotal)
@@ -66,22 +62,32 @@ $("#green").on('click', function(){
 winLose();
 function winLose(){
 	if(userTotal == randNum){
+		
 		alert("You won")
 		wins++;
+		console.log(wins);
+		$("#winCount").text(wins);
 		reset();
 	}
    else if(userTotal > randNum) {
+   	
    	alert("sorry bruh")
-   	  losses++;
-   	  reset()
+   	 losses++;
+   	 console.log(losses);
+       $("#lossCount").text(losses);
+   	 reset();
+   	 $("user-total").text(userTotal)
    }
 
 }
 console.log(userTotal);
 console.log(randNum);
 
+function sound(){
+	$("#audiotag1").play();
+}
 
-
+});
 
 
 

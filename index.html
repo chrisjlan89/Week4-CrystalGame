@@ -1,101 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Crystal Mania </title>
-
-  <!-- Bootstrap File -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha284-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  
-  <!-- CSS --> 
-  <link rel="stylesheet" href="crystal.css" type="text/css">
-
-
-
-</head>
-<body>
-<div class="container">
-  <div class = "row">
-    <div class = "col-md-12 col-lg-12 col-sm-12">
-
-  <div class="jumbotron jumbo-color">
-    <h1>Crystal Collector!!</h1> 
-    <p>You Will be given a random Number at the Start of the Game.</p> 
-    
-    <p>There are four crystals below, each with a value unknown to you!!! You must click to find out. </p>
-
-    <p>Upon clicking a crystal that crystal's value will be revelaed to you and added to your score. </p>
-
-   <p> In order to win the game you must match your score with the score displayed above the crystals. Be wary, going over the total will cause you to lose.
-    </p>
-    </div>
-    </div> 
-  </div>
-  
-</div>	
-<div class ="container">
-  <div class= "row">
-    <div class = "col-md-4 offset-md-2 custom1">
-
-    <div id= "guessNumber">  </div>  
-
-    </div>
-
-
-    <div class = "col-md-4 custom2">
-      
-      <h4> Wins :
-      </h4>
-      <h4>
-        Losses : 
-      </h4>
+   <head>
+      <meta charset="UTF-8">
+      <title>Crystal Mania </title>
+      <!-- Bootstrap File -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha284-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+      <!-- CSS --> 
+      <link rel="stylesheet" href="crystal.css" type="text/css">
+   </head>
+   <body>
+      <div class="container">
+         <div class = "row">
+            <div class = "col-md-12 col-lg-12 col-sm-12">
+               <div class="jumbotron jumbo-color">
+                  <h1>Crystal Collector!!</h1>
+                  <p>You Will be given a random Number at the Start of the Game.</p>
+                  <p>There are four crystals below, each with a value unknown to you!!! You must click to find out. </p>
+                  <p>Upon clicking a crystal that crystal's value will be revelaed to you and added to your score. </p>
+                  <p> In order to win the game you must match your score with the score displayed above the crystals. Be wary, going over the total will cause you to lose.
+                  </p>
+               </div>
+            </div>
+         </div>
       </div>
-
-
-</div>
-</div> 
-
-<div class = "row">
-<div class = "col-md-2 col-sm-2 col-lg-2 offset-md-2"> 
-<div id = "red"><img src ="Assets\CryImages\red.png"></div>
- </div>
- 
- <div class = "col-md-2 col-sm-2 col-lg-2"> 
-  <div id = "blue"><img src ="Assets\CryImages\blue.png"></div>
- </div> 
-
-<div class = "col-md-2 col-sm-2 col-lg-2"> 
-  <div id ="yellow"><img src ="Assets\CryImages\yellow.png"></div>
- </div> 
- 
-<div class = "col-md-2 col-sm-2 col-lg-2"> 
-  <div id = "green"><img src ="Assets\CryImages\green.png"></div>
- </div> 
- 
-</div>
-<div class = "row">
-  <div class = "col-md-4 custom3">
-   <h2> Your Total Score is : </h2>
-  </div>
-
-
-</div>
-
-
-<div class = "row ">
-  <div class = "col-md-4 custom4" >
-   <h2><div id = "user-total">
-   </div></h2>
-  </div>
-
-</div>
- <script type="text/javascript" src = "crystal.js"></script>   
-</body>	
-
-
-
-
+      <div class ="container">
+         <div class= "row">
+            <div class = "col-md-4 offset-md-2 custom1">
+               <div id= "guessNumber">  </div>
+            </div>
+            <div class = "col-md-4 custom2">
+               <h4>
+                  Wins : 
+                  <div id = "winCount"> </div>
+               </h4>
+               <h4>
+                  Losses :  
+                  <div id ="lossCount"></div>
+               </h4>
+            </div>
+         </div>
+      </div>
+      <!-- <audio id="audio" src="http://www.soundjay.com/button/beep-07.wav" autostart="false" ></audio> -->
+      <!--     <audio id="audiotag1" src="Assets/Sounds/GemChest1-1.wav" preload="auto"></audio>
+         <a href="javascript:sound();">Play 5-sec sound on single channel</a> -->
+      <div class = "row">
+         <div class = "col-md-2 col-sm-2 col-lg-2 offset-md-2"> 
+            <img src ="Assets\CryImages\red.png" id = "red" >
+         </div>
+         <div class = "col-md-2 col-sm-2 col-lg-2"> 
+            <img src ="Assets\CryImages\blue.png" id="blue">
+         </div>
+         <div class = "col-md-2 col-sm-2 col-lg-2">
+            <!--  <div id ="yellow"> --><img src ="Assets\CryImages\yellow.png" id ="yellow"><!-- </div> -->
+         </div>
+         <div class = "col-md-2 col-sm-2 col-lg-2">
+            <!-- <div id = "green"> --><img src ="Assets\CryImages\green.png" id = "green"><!-- </div> -->
+         </div>
+      </div>
+      <div class = "row">
+         <div class = "col-md-4 custom3 text-center">
+            <h2> Your Total Score is : </h2>
+         </div>
+      </div>
+      <div class = "row ">
+         <div class = "col-md-4 custom4" >
+            <h2>
+               <div id = "user-total">
+               </div>
+            </h2>
+         </div>
+      </div>
+      <script type="text/javascript" src = "crystal.js"></script>   
+   </body>
 </html>
