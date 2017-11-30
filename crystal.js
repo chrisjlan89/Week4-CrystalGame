@@ -1,12 +1,10 @@
-
 $( document ).ready(function() {
-
 
 var randNum = Math.floor(Math.random()*100 + 20)
 var userTotal = 0;
 var wins = 0;
 var losses = 0;	 
-
+var audio = new Audio("Assets/Sounds/GemChest1-1.wav");
 reset();
 
 function reset(){
@@ -29,7 +27,7 @@ console.log("green : " + green);
 };
 
 $("#red").on('click', function(){
-	var gemSound = 
+	audio.play();
 	userTotal = userTotal + red;
 	console.log(userTotal)
 	$("#user-total").text(userTotal)
@@ -37,6 +35,7 @@ $("#red").on('click', function(){
 });
 
 $("#blue").on('click', function(){
+	audio.play();
 	userTotal = userTotal + blue;
 	console.log(userTotal)
 	$("#user-total").text(userTotal)
@@ -45,6 +44,7 @@ $("#blue").on('click', function(){
 
 
 $("#yellow").on('click', function(){
+	audio.play();
 	userTotal = userTotal + yellow;
 	console.log(userTotal)
 	$("#user-total").text(userTotal)
@@ -52,6 +52,7 @@ $("#yellow").on('click', function(){
 });
 
 $("#green").on('click', function(){
+	audio.play();
 	userTotal = userTotal + green;
 	console.log(userTotal)
 	$("#user-total").text(userTotal)
@@ -67,7 +68,9 @@ function winLose(){
 		wins++;
 		console.log(wins);
 		$("#winCount").text(wins);
+		console.log()
 		reset();
+		$("#user-total").text(userTotal)
 	}
    else if(userTotal > randNum) {
    	
@@ -76,7 +79,7 @@ function winLose(){
    	 console.log(losses);
        $("#lossCount").text(losses);
    	 reset();
-   	 $("user-total").text(userTotal)
+   	 $("#user-total").text(userTotal)
    }
 
 }
