@@ -26,10 +26,30 @@ p {
 	background: #451b55;
 }
 
+.custom3{
+	background: #89ff24;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.custom4{
+	background: #89ff24;
+    text-align: center;
+}
+
+
+
+
+
 h3, h4 {
 	color: #fff;
 }
 
+h2 {
+	font-size: 2em;
+	
+}
+ 
 .user-score {
 	width: 260px;
 	height: 260px;
