@@ -5,17 +5,52 @@ var userTotal = 0;
 var wins = 0;
 var losses = 0;	 
 var audio = new Audio("Assets/Sounds/GemChest1-1.wav");
-reset();
 
+
+var gems = function() {
+     return Math.floor(Math.random()*12+1);
+    
+      
+}
+
+var red =  gems();
+var blue =  gems();
+var yellow = gems();
+var green =  gems();
+
+reset();
+//Generates new crystal numbers randomly
+// Generates new random Guess number
+// Writes initial user score of 0 and random guess number to hmml
 function reset(){
- 
+ //guess number random generation
    randNum = Math.floor(Math.random()*100 + 20)
    userTotal = 0;
-   red = Math.floor(Math.random()*12+1);
+ // generates all crytals randmly and sets their values  
+   red =  gems();
+  // Ensures np repeat values in the gems.
+   	do{ blue = gems()
+      console.log( "blue" + blue);
+   	} while(blue == red);
+       console.log( "blue" + blue);
+   	do{ yellow = gems()
+
+   	} while(yellow == blue || yellow == red);
+
+
+   		do{ green= gems()
+
+   	} while(green == blue || green == red || green == yellow);   
+
+   
+   
+
+
+   /*red = Math.floor(Math.random()*12+1);
    blue = Math.floor(Math.random()*12 + 1);
    yellow = Math.floor(Math.random()*12 + 1);
-   green = Math.floor(Math.random()*12 + 1);
-   console.log("red : " + red);
+   green = Math.floor(Math.random()*12 + 1);*/
+console.log("red : " + red);
 console.log("blue : " + blue);
 console.log("yellow : " + yellow);
 console.log("green : " + green);
@@ -25,7 +60,9 @@ console.log("green : " + green);
   $("#user-total").text(userTotal)
  
 };
-
+// On click it chnages the value stored in 
+// the user total to the user total + 
+// the value of crystal which was earlier random 
 $("#red").on('click', function(){
 	audio.play();
 	userTotal = userTotal + red;
@@ -59,6 +96,8 @@ $("#green").on('click', function(){
 	winLose();
 });
 
+// A win and lose function which is all called in on the on click events
+// which will effectively check these conditions each time.
 
 winLose();
 function winLose(){
