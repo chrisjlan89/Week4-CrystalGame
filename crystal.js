@@ -22,8 +22,8 @@ console.log("green : " + green);
  console.log("wins : " + wins);
   console.log("losses:" + losses);
   $("#guessNumber").text(randNum)
-  $("user-total").text(userTotal)
-  
+  $("#user-total").text(userTotal)
+ 
 };
 
 $("#red").on('click', function(){

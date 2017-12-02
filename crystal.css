@@ -1,3 +1,7 @@
+body{
+	background: url("Assets/CryImages/subtlegray.png")
+}
+
 p {
 	margin-top: .5em
 	margin-bottom: .5em;
@@ -18,16 +22,19 @@ p {
 	background: #337ab7;
 	margin-left: 1%;
 	margin-right:  7%;
+	border-radius: 5%
 	}
 
 .custom2{
 	width: 200px;
 	height: 200px;
 	background: #451b55;
+	border-radius: 5%;
 }
 
 .custom3{
 	background: #89ff24;
+	border-radius: 5%
     
     
 }
@@ -35,6 +42,7 @@ p {
 .custom4{
 	background: #89ff24;
     text-align: center;
+    border-radius: 5%
 }
 
 
@@ -67,4 +75,11 @@ h2 {
 
 body {
 	margin: 0 auto;
+}
+
+img {
+	margin-bottom: 5%;
+	margin-top: 5%;
+	border: dashed #4aaaa5  4px;
+	border-radius: 4px;
 }
